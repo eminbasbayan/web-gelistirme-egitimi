@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form Elemanları</title>
+  </head>
+  <body>
+    <h1>Form Örnekleri</h1>
+
+    <form action="/submit">
+      <input type="checkbox" id="agree" checked name="agree_terms" />
+      <label for="agree">Şartları ve koşulları kabul ediyorum</label>
+      <button type="submit">Gönder</button>
+    </form>
+
+    <form action="/submit">
+      <p>Gömlek Bedeni:</p>
+      <input type="radio" id="small" name="size" value="S" />
+      <label for="small">Small</label>
+
+      <input type="radio" id="medium" name="size" value="M" />
+      <label for="medium">Medium</label>
+
+      <input type="radio" id="large" name="size" value="L" />
+      <label for="large">Large</label>
+
+      <button type="submit">Seçimi Gönder</button>
+    </form>
+
+    <!-- meal=fish -->
+    <form action="/submit" method="GET">
+      <select name="meal" id="meal">
+        <option value="">Lütfen bir yemek seçin</option>
+        <option value="fish">Balık</option>
+        <option value="vegetarian">Vejetaryen</option>
+        <option value="steak" selected>Biftek</option>
+      </select>
+
+      <button type="submit">Gönder</button>
+    </form>
+
+    <form action="/submit">
+      <label for="comments">Yorumlarınız:</label>
+      <br />
+      <textarea name="comments" id="comments" rows="5" cols="50">
+Varsayılan metin</textarea
+      >
+      <button>Gönder</button>
+    </form>
+
+    <form action="/submit">
+      <label for="volume">Ses seviyesi:</label>
+      <input
+        type="range"
+        id="volume"
+        name="volume"
+        min="0"
+        max="100"
+        step="50"
+      />
+      <input type="submit" value="Gönder">
+    </form>
+  </body>
+</html>
