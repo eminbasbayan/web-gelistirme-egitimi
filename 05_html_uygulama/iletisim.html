@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim - HaberPlus</title>
+  </head>
+  <body>
+    <!-- Header Bölümü -->
+    <header>
+      <!-- Ana Navigasyon -->
+      <nav>
+        <a href="index.html">
+          <img
+            src="./images/logo.jpg"
+            alt="HaberPlus Logo"
+            width="150"
+            height="60"
+          />
+        </a>
+        <a href="index.html">Ana Sayfa</a> |
+        <a href="iletisim.html">İletişim</a> |
+        <a href="giris.html">Giriş</a>
+      </nav>
+    </header>
+
+    <!-- Ana İçerik Bölümü -->
+    <main>
+      <section>
+        <h1>📬 Bize Ulaşın</h1>
+        <img src="./images/iletisim.jpg" alt="İletişim Görseli" width="600" />
+        <br />
+        <br />
+        <!-- İletişim Formu -->
+        <form action="#" method="POST">
+          <fieldset>
+            <legend>Kişisel Bilgiler</legend>
+            <div>
+              <label for="ad">Adınız:</label>
+              <input type="text" id="ad" name="ad" required />
+            </div>
+            <br />
+            <div>
+              <label for="email">E-posta:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </fieldset>
+          <br />
+          <fieldset>
+            <legend>Mesaj Detayları</legend>
+            <div>
+              <label for="konu">Konu:</label>
+              <select name="konu" id="konu" required>
+                <option value="genel">Genel</option>
+                <option value="reklam">Reklam</option>
+                <option value="teknik">Teknik Destek</option>
+              </select>
+            </div>
+            <br />
+            <div>
+              <label for="mesaj">Mesajınız:</label>
+              <textarea
+                name="mesaj"
+                id="mesaj"
+                rows="5"
+                cols="50"
+                required
+              ></textarea>
+            </div>
+          </fieldset>
+          <br />
+          <div>
+            <button type="submit">Gönder</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <br />
+
+    <!-- Footer Bölümü -->
+    <footer>
+      <hr />
+      <p>📧 <a href="mailto:iletisim@example.com">iletisim@example.com</a></p>
+      <p>&copy; 2025 HaberPlus - Tüm hakları saklıdır</p>
+    </footer>
+  </body>
+</html>
