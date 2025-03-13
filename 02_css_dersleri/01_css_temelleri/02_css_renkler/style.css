@@ -1,0 +1,10 @@
+p {
+    color: darkblue;
+   /* background-color: #21ca06; */
+   /* background-color: rgb(33, 202, 6); */
+   background-color: hsl(112, 97%, 41%);
+}
+
+span {
+    background-color: #95290a;
+}
