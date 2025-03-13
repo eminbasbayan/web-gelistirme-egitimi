@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transitions Nedir?</title>
+    <style>
+      button {
+        background-color: red;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        transition: 1s ease-in, border-radius 1s ease-in;
+        border-radius: 0;
+      }
+
+      button:hover {
+        background-color: blue;
+        border-radius: 50%;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        transition: width 3s cubic-bezier(0.5, 0, 0.75, 0) 2s;
+      }
+
+      .box:hover {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Transitions Nedir?</h1>
+
+    <button>Tıkla</button>
+    <br />
+    <br />
+    <div class="box"></div>
+  </body>
+</html>
