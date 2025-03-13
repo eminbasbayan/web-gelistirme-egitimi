@@ -1,0 +1,54 @@
+/* Pseudo Sınıflar */
+
+a:visited {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+button:active{
+    background-color: aqua;
+}
+
+p:nth-of-type(2) {
+    font-weight: bold;
+}
+
+input:disabled {
+    background-color: blue;
+}
+
+input:focus{
+    outline: 2px solid blue;
+    background-color: brown;
+}
+
+/* Pseudo Elemanlar */
+
+p::first-letter {
+    font-size: 32px;
+    font-weight: bold;
+    color: blue;
+}
+
+p::first-line {
+    color: green;
+    text-transform: uppercase;
+}
+
+p::selection {
+    background-color: yellowgreen;
+}
+
+h3::before {
+    content: "Önemli: ";
+    font-weight: bold;
+    color: red;
+}
+
+h3::after {
+    content: " [Daha Fazla Oku]";
+    color: red;
+}
