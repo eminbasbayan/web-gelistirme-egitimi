@@ -1,0 +1,28 @@
+div #anaBaslik {
+    color: black;
+}
+
+#anaBaslik {
+    color: red;
+}
+
+.special{
+    color: green;
+}
+
+h1 {
+    color: blue !important;
+}
+
+
+
+
+
+p {
+    color: blue;
+}
+
+
+p {
+    color: brown;
+}
