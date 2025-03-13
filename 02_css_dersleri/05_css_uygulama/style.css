@@ -107,3 +107,30 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
 }
+
+/* İletişim bölümü */
+
+.contact-section {
+   text-align: center;
+   border-top: 1px solid rgba(0, 0, 0, 0.1);
+   padding-top: 25px;
+   margin-top: 30px;
+}
+
+.contact-link{
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-block;
+    margin: 0 12px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
