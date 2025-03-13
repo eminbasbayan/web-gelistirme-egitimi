@@ -1,0 +1,33 @@
+button[disabled] {
+  background-color: gray;
+  color: white;
+}
+
+button[type] {
+  background-color: red;
+  color: white;
+}
+
+a[target="_blank"] {
+  color: chartreuse;
+}
+
+img[src*="logo"] {
+  background-color: brown;
+}
+
+div[data-info^="user"] {
+  font-weight: bold;
+}
+
+img[src$=".jpg"] {
+  background-color: aqua;
+}
+
+div[class~="higlight"] {
+  background-color: yellow;
+}
+
+p[lang|="fr"] {
+  font-style: italic;
+}
