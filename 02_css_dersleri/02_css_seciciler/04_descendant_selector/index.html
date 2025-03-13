@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS'te Descendant (Soydan Gelen) Seçici</title>
+
+    <style>
+       nav a {
+            color: red;
+        }
+
+        .my-links a{
+            color: blueviolet;
+        }
+
+        section a{
+            color: aqua;
+        }
+
+
+        footer li{
+            text-align: center;
+            list-style: none;
+        }
+
+        footer li a{
+            color: brown;
+        }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#">Ana Sayfa</a>
+      <a href="#">Hakkımızda</a>
+      <a href="#">İletişim</a>
+    </nav>
+
+    <hr />
+
+    <ul class="my-links">
+      <li><a href="#">Bağlantı 1</a></li>
+      <li><a href="#">Bağlantı 2</a></li>
+      <li><a href="#">Bağlantı 3</a></li>
+    </ul>
+
+    <hr />
+
+    <section>
+      <h2>İlk Blog Yazısı</h2>
+      <p>Bu bir blog yazısıdır. <a href="#">Devamını Oku</a></p>
+    </section>
+
+    <section>
+      <h2>İkinci Blog Yazısı</h2>
+      <p>Bu ikinci blog yazısıdır. <a href="#">Devamını Oku</a></p>
+    </section>
+
+    <hr />
+
+    <footer>
+      <ul>
+        <li><a href="#">Gizlilik Politikası</a></li>
+        <li><a href="#">Kullanım Şartları</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
