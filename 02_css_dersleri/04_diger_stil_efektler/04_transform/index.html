@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Transform Nedir?</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        background-color: brown;
+        /* transform: rotate(45deg); */
+        /* transform: rotate(-30deg);
+           transform-origin: top right; */
+        /*  transform: scale(1.5); */
+        /* transform: scaleX(2);
+        transform: scaleY(4); */
+        /*   transform: translate(100px, 100px);*/
+        /* transform: translateX(80px); */
+        /* transform: translateY(-80px); */
+        /* transform: skew(20deg, 10deg); */
+        /* transform: skewX(10deg); */
+        /* transform: skewY(-20deg); */
+        transition: transform 1s ease;
+      }
+
+      .box:hover {
+        transform: rotate(30deg) translateX(100px) scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Transform Nedir?</h1>
+
+    <div class="box"></div>
+  </body>
+</html>
