@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox: flex-direction Nedir?</title>
+    <style>
+      .container {
+        display: flex;
+        /*   flex-direction: row; default */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+      }
+
+      .container div {
+        background-color: aqua;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item-1">Öğe 1</div>
+      <div class="item-2">Öğe 2</div>
+      <div class="item-3">Öğe 3</div>
+      <div class="item-4">Öğe 4</div>
+      <div class="item-5">Öğe 5</div>
+    </div>
+  </body>
+</html>
