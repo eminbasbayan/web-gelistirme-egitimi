@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox: align-items Nedir?</title>
+    <style>
+      .container {
+        border: 2px solid red;
+        height: 600px;
+        display: flex;
+        gap: 10px;
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /* align-items: baseline; */
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container div {
+        background-color: aqua;
+      }
+
+      .item-2{
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item-1">Öğe 1</div>
+      <div class="item-2">Öğe 2</div>
+      <div class="item-3">Öğe 3</div>
+      <div class="item-4">Öğe 4</div>
+      <div class="item-5">Öğe 5</div>
+      <div class="item-6">Öğe 6</div>
+      <div class="item-7">Öğe 7</div>
+      <div class="item-8">Öğe 8</div>
+      <div class="item-9">Öğe 9</div>
+      <div class="item-10">Öğe 10</div>
+    </div>
+  </body>
+</html>
