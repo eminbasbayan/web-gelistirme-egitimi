@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox: Order Nedir?</title>
+    <style>
+      .container {
+        border: 2px solid red;
+        height: 600px;
+        display: flex;
+        gap: 20px;
+      }
+
+      .container div {
+        background-color: aqua;
+      }
+
+      .item-8 {
+        order: -1;
+      }
+
+      .item-9 {
+        order: -2;
+      }
+
+      .item-10 {
+        order: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item-1">Öğe 1</div>
+      <div class="item-2">Öğe 2</div>
+      <div class="item-3">Öğe 3</div>
+      <div class="item-4">Öğe 4</div>
+      <div class="item-5">Öğe 5</div>
+      <div class="item-6">Öğe 6</div>
+      <div class="item-7">Öğe 7</div>
+      <div class="item-8">Öğe 8</div>
+      <div class="item-9">Öğe 9</div>
+      <div class="item-10">Öğe 10</div>
+    </div>
+  </body>
+</html>
