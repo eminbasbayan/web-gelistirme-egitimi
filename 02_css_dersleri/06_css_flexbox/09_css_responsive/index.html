@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS'te Medya Sorguları (Media Queries) ile Responsive Tasarım</title>
+    <style>
+      @media (max-width: 599px) {
+        h1 {
+          color: red;
+          font-size: 16px;
+        }
+
+        button {
+          display: none;
+        }
+      }
+
+      @media (min-width: 800px){
+        p {
+          font-size: 20px;
+          color: blue;
+        }
+      }
+
+      @media (width: 723px) {
+        button {
+          background-color: aqua;
+        }
+      }
+
+      @media (min-width: 600px) and (max-width: 900px) {
+        body{
+          background-color: blue;
+          color: white;
+        }
+      }
+
+      @media (orientation: landscape) {
+        body {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS'te Medya Sorguları (Media Queries) ile Responsive Tasarım</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
+      necessitatibus id eveniet unde. Nesciunt cumque exercitationem tenetur
+      quis? Enim tempore, voluptatum quisquam inventore ipsa labore ipsum
+      accusantium. Similique, provident aliquid!
+    </p>
+    <button>Tıkla!</button>
+  </body>
+</html>
