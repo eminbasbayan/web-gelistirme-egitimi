@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript'te Argüman Alan String Methodları</title>
+  </head>
+  <body>
+    <h1>JavaScript'te Argüman Alan String Methodları</h1>
+
+    <script>
+      console.log("Merhaba".toUpperCase());
+      console.log("Merhaba".includes("ha"));
+
+      const sehir = "İstanbul";
+      console.log(sehir.indexOf("tan"));
+      console.log(sehir.indexOf("lar"));
+
+      const cumle = "Merhaba Dünya";
+      console.log(cumle.slice(8, 13));
+      console.log(cumle.slice(6));
+
+      const meyve = "Ben elmayı severim";
+      const yeniMeyve = meyve.replace("elmayı", "armudu");
+      console.log(meyve);
+      console.log(yeniMeyve);
+
+      const kelime = "Hop! ";
+      console.log(kelime.repeat(3));
+
+      const isim = "Emin Başbayan";
+      console.log(isim.slice(-10));
+      
+    </script>
+  </body>
+</html>
