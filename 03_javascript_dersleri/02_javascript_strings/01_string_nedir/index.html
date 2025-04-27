@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te String (Metin) Veri Türü</title>
+  </head>
+  <body>
+    <h1>JavaScript’te String (Metin) Veri Türü</h1>
+
+    <script>
+      const isim = "Emin Başbayan";
+      const sehir = "İstanbul";
+      // const adres = "Ümraniye';
+      // const mesaj = "Ali dedi ki: 'Bugün çok mutluyum!'";
+      // const mesaj2 = 'Ali dedi ki: "Bugün çok mutluyum!"';
+      // const mesaj3 = 'Ali dedi ki: "Bugün çok mutluyum!"';
+      let siparisNo = 12345;
+      const mesaj = "Merhaba " + isim + " Sipariş No: " + siparisNo;
+      const mesaj2 = `Merhaba ${isim}, Sipariş No: ${siparisNo}`;
+
+      let ozelKarakter = "Bugün hava çok güzel!";
+      let rakamIceren = "12345"; // Sayılar da string olarak saklanabilir
+      let semboller = "!@#$%^&*()_+";
+      let bosMetin = ""; // İçinde hiçbir karakter bulunmayan boş bir string
+      console.log(bosMetin); // Çıktı: (Boş bir çıktı)
+
+      console.log(mesaj);
+      console.log(mesaj2);
+    //   console.log(mesaj2);
+    //   console.log(mesaj3);
+      console.log(typeof isim);
+    </script>
+  </body>
+</html>
