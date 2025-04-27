@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Template Literals</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Template Literals</h1>
+
+    <script>
+      // “3 adet Elma aldınız. Toplam fiyat: 13.50 TL.”
+
+      // const urun = "Armut";
+      // const fiyat = 4.5;
+      // const miktar = 3;
+
+      // // const mesaj = miktar + " adet " + urun + " aldınız. Toplam fiyat: " + (fiyat * miktar) + " TL.";
+
+      // const mesaj = `${miktar} adet ${urun} aldınız. Toplam fiyat: ${
+      //   fiyat * miktar
+      // } TL.`;
+      // console.log(mesaj);
+
+      let a = 10;
+      let b = 5;
+
+      console.log(`Toplam: ${a + b}`); // "Toplam: 15"
+      console.log(`Çarpım: ${a * b}`); // "Çarpım: 50"
+
+      let isim = "ahmet";
+      console.log(`Merhaba, ${isim.toUpperCase()}`); // "Merhaba, AHMET!"
+
+      let eskiYontem =
+        "Merhaba,\nBugün hava çok güzel!\nUmarım harika bir gün geçirirsiniz.";
+      console.log(eskiYontem);
+
+      const yeniYontem = `Merhaba,
+Bugün hava çok güzel!
+Umarım harika bir gün geçirirsiniz.`;
+
+      console.log(yeniYontem);
+
+      let urunAdi = "Dizüstü Bilgisayar";
+      let fiyat = 15000;
+      let stok = 7;
+
+      let urunBilgi = `Ürün: ${urunAdi}
+Fiyat: ${fiyat} TL
+Stok Durumu: ${stok} adet`;
+      console.log(urunBilgi);
+    </script>
+  </body>
+</html>
