@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te null ve undefined</title>
+  </head>
+  <body>
+    <h1>JavaScript’te null ve undefined</h1>
+
+    <script>
+      let isim;
+
+      console.log(isim);
+
+      function selamVer() {
+        console.log("Merhaba!");
+      }
+
+      let sonuc = selamVer();
+
+      console.log(sonuc);
+
+      let meyveler = ["Elma", "Armut", "Çilek"];
+      console.log("Elma"[4]);
+      console.log(meyveler[3]);
+
+      let aktifKullanici = null;
+      console.log(aktifKullanici);
+      
+      console.log(5 + null);
+      console.log(5 + undefined);
+    </script>
+  </body>
+</html>
