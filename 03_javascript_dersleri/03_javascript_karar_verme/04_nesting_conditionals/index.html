@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te İç İçe Koşullu İfadeler (Nesting Conditionals)</title>
+  </head>
+  <body>
+    <h1>JavaScript’te İç İçe Koşullu İfadeler (Nesting Conditionals)</h1>
+
+    <script>
+      // 🎯 Senaryo: Online Kursa Katılım Sistemi
+      // Bir kullanıcının bir kursa katılabilmesi için şu şartlar gerekiyor:
+
+      // 1- Kullanıcının yaşı 16'dan büyük olmalı.
+
+      // 2- Üye olması gerekiyor.
+
+      // 3- Ücret ödemesi yapılmış olmalı.
+
+      // * Bu üç şartın sırasıyla kontrol edilmesi gerekiyor. Yani biri sağlanmazsa diğerine bakılmayacak.
+
+      const age = 17;
+      const isMember = true;
+      const hasPaid = true;
+
+      if (age > 16) {
+        if (isMember) {
+          if (hasPaid) {
+            console.log("Kursa başarıyla katıldınız!");
+          } else {
+            console.log("Ödeme yapılmamış. Lütfen kurs ücretini ödeyin.");
+          }
+        } else {
+          console.log("Üyelik bulunamadı. Lütfen önce üye olun.");
+        }
+      } else {
+        console.log("Yaşınız kursa katılmak için uygun değil.");
+      }
+    </script>
+  </body>
+</html>
