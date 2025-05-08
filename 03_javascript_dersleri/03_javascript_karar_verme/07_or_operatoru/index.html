@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te OR (||) Operatörü</title>
+  </head>
+  <body>
+    <h1>JavaScript’te OR (||) Operatörü</h1>
+
+    <script>
+      // Bir spor salonunun üyelik kuralı:
+      // 0-12 yaş → Ücretsiz
+      // 13-17 yaş → 50 TL
+      // 18-60 yaş → 100 TL
+      // 61 ve üstü → Ücretsiz
+      // Mantıksız yaş (örneğin -10, 999) → Geçersiz
+
+      const age = 15;
+
+      if ((age >= 0 && age <= 12) || age >= 61) {
+        console.log("Ücretsiz");
+      } else if (age >= 13 && age <= 17) {
+        console.log("50 TL");
+      } else if (age >= 18 && age <= 60) {
+        console.log("100 TL");
+      } else {
+        console.log("Geçersiz yaş");
+      }
+
+      /* *********************** */
+      // “Eğer öğrenciysen veya 65 yaş üstündeysen giriş ücretsizdir.”
+
+      // const isStudent = false;
+      // const age = 64
+
+      // if (isStudent || age >= 65) {
+      //   console.log("Ücretsiz giriş.");
+      // } else {
+      //   console.log("Giriş ücretli.");
+      // }
+    </script>
+  </body>
+</html>
