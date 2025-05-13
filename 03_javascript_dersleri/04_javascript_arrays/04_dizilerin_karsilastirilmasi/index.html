@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Dizilerin Karşılaştırılması</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Dizilerin Karşılaştırılması</h1>
+
+    <script>
+      /*     console.log("kitap" === "kitap");
+      console.log(5 === 5); */
+
+      // console.log(["güneş", "ay"] === ["güneş", "ay"]);
+
+      //   const x = 10;
+
+      //   const liste = [1, 2, 3];
+
+      const meyveler = ["elma", "armut"];
+      const sepet = meyveler;
+      console.log(meyveler);
+      console.log(sepet);
+      sepet.push("çilek");
+      console.log("sepet", sepet);
+      console.log("meyveler", meyveler);
+
+      console.log(meyveler === sepet);
+    </script>
+  </body>
+</html>
