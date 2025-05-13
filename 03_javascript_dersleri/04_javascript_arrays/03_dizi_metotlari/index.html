@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Dizi Metotları</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Dizi Metotları</h1>
+
+    <script>
+      const kitapListesi = ["Simyacı", "Sefiller", "Suç ve Ceza", "1984"];
+
+      console.log(kitapListesi);
+      const yeniKitaplar = ["Beyaz Gemi", "Tutunamayanlar"];
+      const tumKitapler = kitapListesi.concat(yeniKitaplar);
+
+      console.log(tumKitapler.includes("Suç ve Ceza"));
+      console.log(tumKitapler.includes("Harry Potter"));
+
+      console.log(kitapListesi.indexOf("Suç ve Ceza"));
+      console.log(kitapListesi.indexOf("Harry Potter"));
+      kitapListesi.reverse();
+      console.log(kitapListesi);
+      const ilkIkiKitap = kitapListesi.slice(0, 2);
+      console.log(ilkIkiKitap);
+      console.log(kitapListesi.slice(-2));
+
+      kitapListesi.splice(1, 1);
+      console.log(kitapListesi);
+      kitapListesi.splice(2, 0, "Yeni Dünya");
+      console.log(kitapListesi);
+      kitapListesi.splice(0, 1, "Tutunamayanlar");
+      console.log(kitapListesi);
+
+      console.log(tumKitapler);
+      tumKitapler.sort();
+      console.log(tumKitapler);
+    </script>
+  </body>
+</html>
