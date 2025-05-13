@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Diziler (Arrays) ile Çalışmak</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Diziler (Arrays) ile Çalışmak</h1>
+
+    <script>
+      // "Inception", "Babam ve Oğlum", "The Matrix", "Joker"
+
+      const film1 = "Inception";
+      const film2 = "Babam ve Oğlum";
+      const film3 = "The Matrix";
+      const film4 = "Joker";
+
+      const filmler = ["Inception", "Babam ve Oğlum", "The Matrix", "Joker"];
+      console.log(filmler);
+      console.log(filmler[2]);
+      filmler[3] = "Ayla";
+      console.log(filmler);
+      filmler[4] = "Fight Club";
+      console.log(filmler);
+      filmler[9] = "Avatar";
+      console.log(filmler);
+      console.log(filmler[7]);
+
+      const karisikFilmListesi = ["Inception", 2010, false, null, undefined, ["Bilim Kurgu", "Aksiyon"]];
+      console.log(karisikFilmListesi);
+      console.log(karisikFilmListesi.length);
+      console.log(filmler[1][0]);
+      
+    </script>
+  </body>
+</html>
