@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te İç İçe Diziler (Nested Arrays)</title>
+  </head>
+  <body>
+    <h1>JavaScript’te İç İçe Diziler (Nested Arrays)</h1>
+
+    <script>
+      const sayilar = [3, 7, 15, 42]; // Basit dizi
+
+      const gunler = [
+        ["Pazartesi", "Salı"],
+        ["Çarşamba", "Perşembe"],
+        ["Cuma", "Cumartesi", "Pazar"],
+      ];
+
+      const yoklama = [
+        [true, true, false], // Ali
+        [true, false, false], // Ayşe
+        [true, true, true], // Mehmet
+      ];
+
+      console.log(yoklama[1][1]);
+      
+    </script>
+  </body>
+</html>
