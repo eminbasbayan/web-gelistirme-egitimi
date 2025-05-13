@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      JavaScript'te const ile Tanımlanan Diziler Neden Değiştirilebilir?
+    </title>
+  </head>
+  <body>
+    <h1>JavaScript'te const ile Tanımlanan Diziler Neden Değiştirilebilir?</h1>
+
+    <script>
+      // const okulAdi = "Atatürk Lisesi";
+      // okulAdi = "Cumhuriyet Lisesi";
+
+      const ogrenciler = ["Ayşe", "Mehmet", "Ali"];
+      ogrenciler.push("Zeynep");
+      ogrenciler[1] = "Mustafa";
+      console.log(ogrenciler);
+      ogrenciler = ["Ahmet", "Veli"];
+
+      const mesajlar = [];
+    </script>
+  </body>
+</html>
