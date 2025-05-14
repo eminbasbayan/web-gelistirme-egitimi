@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Nesnelerinde Veri Ekleme, Güncelleme ve Silme</title>
+  </head>
+  <body>
+    <h1>JavaScript Nesnelerinde Veri Ekleme, Güncelleme ve Silme</h1>
+
+    <script>
+      const employeeStatus = {
+        Ahmet: "Görevde",
+        Zeynep: "Toplantıda",
+      };
+
+      console.log(employeeStatus.Ahmet);
+      console.log(employeeStatus["Zeynep"]);
+
+      // employeeStatus.Zeynep = "Görevde";
+      employeeStatus["Zeynep"] = "Görevde";
+
+      console.log(employeeStatus.Zeynep);
+
+      employeeStatus.Elif = "Eğitimde";
+      employeeStatus["Murat"] = "İzin";
+
+      console.log(employeeStatus);
+
+      // delete employeeStatus.Ahmet;
+      delete employeeStatus["Ahmet"]
+
+      if ("Ahmet" in employeeStatus) {
+        console.log("Ahmet hâlâ sistemde.");
+      } else {
+        console.log("Ahmet silinmiş.");
+      }
+
+      const name = "Elif";
+
+      console.log(employeeStatus[name]);
+      
+
+    </script>
+  </body>
+</html>
