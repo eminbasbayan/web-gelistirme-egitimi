@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Nesneler (Object Literals) ile Çalışmak</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Nesneler (Object Literals) ile Çalışmak</h1>
+
+    <script>
+      /*       yorumlar: {
+            ilkYorum: "Harika bir profil!",
+            ikinciYorum: "Paylaşımlar çok güzel."
+        } */
+      const kullanici = {
+        kullaniciAdi: "bilgenyazilimakademisi",
+        takipciSayisi: 3000,
+        aciklama: "En Güncel Yazılım Eğitimleri",
+        gizliMi: false,
+        ilgiAlanlari: ["yazılım", "programlama"],
+        yorumlar: [
+          {
+            kullaniciAdi: "emin1234",
+            yorum: "Harika bir profil!",
+          },
+          {
+            kullaniciAdi: "emre1234",
+            yorum: "Paylaşımlar çok güzel.",
+          },
+        ],
+      };
+
+      console.log(kullanici.yorumlar[1].yorum);
+      
+
+    //   console.log(kullanici.kullaniciAdi);
+    //   console.log(kullanici.takipciSayisi);
+    //   console.log(kullanici.aciklama);
+    //   console.log(kullanici.gizliMi);
+
+    //   console.log(kullanici["kullaniciAdi"]);
+    //   console.log(kullanici["takipciSayisi"]);
+    //   console.log(kullanici["aciklama"]);
+    //   console.log(kullanici["gizliMi"]);
+    </script>
+  </body>
+</html>
