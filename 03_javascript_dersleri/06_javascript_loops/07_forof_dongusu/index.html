@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te for...of Döngüsü</title>
+  </head>
+  <body>
+    <h1>JavaScript’te for...of Döngüsü</h1>
+
+    <script>
+      // const kitaplar = [
+      //   'Kürk Mantolu Madonna',
+      //   'Simyacı',
+      //   'Tutunamayanlar',
+      //   'Sinekli Bakkal',
+      // ];
+
+      // for (let i = 0; i < kitaplar.length; i++) {
+      //   console.log('Kitap: ' + kitaplar[i]);
+      // }
+
+      // for (let eser of a) {
+      //   console.log('Kitap: ', kitap);
+      // }
+
+      const siniflar = [
+        ['Mert', 'Zeynep'],
+        ['Berk', 'Ece'],
+        ['İrem', 'Yusuf'],
+      ];
+
+      for (let sinif of siniflar) {
+        for (let ogrenci of sinif) {
+          console.log('Öğrenci: ', ogrenci);
+        }
+      }
+
+      //      console.log(siniflar[1][1]);
+
+      const kelime = 'JavaScript';
+
+      for (let harf of kelime) {
+        console.log(harf);
+      }
+    </script>
+  </body>
+</html>
