@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonksiyonlara Birden Fazla Bilgi (Argüman) Göndermek</title>
+  </head>
+  <body>
+    <h1>Fonksiyonlara Birden Fazla Bilgi (Argüman) Göndermek</h1>
+
+    <script>
+      function introduce(name, age) {
+        // console.log("Benim adım " + name + " ve yaşım " + age);
+        console.log(`Benim adım ${name} ve yaşım ${age}.`);
+      }
+
+      introduce('Ali', 16);
+      introduce('Merve');
+
+      function checkResult(studentName, score) {
+        if (score >= 50) {
+          console.log(studentName + ' dersi geçti!');
+        } else {
+          console.log(studentName + ' dersten kaldı!');
+        }
+      }
+
+      checkResult('Mehmet', 80);
+      checkResult('Ali', 45);
+
+      function repeatText(text, count) {
+        let output = '';
+        for (let i = 0; i < count; i++) {
+          output += text;
+        }
+        console.log(output);
+      }
+
+      repeatText("Uyarı! ", 5);
+      repeatText("BilGen Yazılım Akademi ", 3);
+    </script>
+  </body>
+</html>

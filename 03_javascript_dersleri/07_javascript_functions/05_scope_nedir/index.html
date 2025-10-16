@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Scope (Kapsam) Nedir?</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Scope (Kapsam) Nedir?</h1>
+
+    <script>
+      // const appName = 'ChatApp';
+      // const username = 'eminbasbayan';
+
+      // function printName() {
+      //   console.log(appName);
+      //   const fullName = 'Emin Başbayan';
+      //   console.log(fullName);
+      // }
+
+      // console.log(fullName);
+      // printName();
+      // console.log(appName);
+
+      // if (true) {
+      //   const message = 'Merhaba!';
+      //   console.log(message); // "Merhaba!"
+      // }
+
+      // console.log(message);
+
+      // const user = 'Zeynep';
+
+      // function login() {
+      //   const user = 'Ahmet';
+      //   console.log('Giriş yapan:', user);
+      // }
+
+      // login();
+      // console.log('Dışarıdaki', user);
+
+      // let city = 'İzmir';
+
+      // function showCity() {
+      //   let city = 'İstanbul';
+      //   if (true) {
+      //     let city = 'Adana';
+      //     console.log(city);
+      //   }
+      // }
+
+      // showCity(); // "İzmir"
+
+      function outer() {
+        const token = '12345';
+
+        function inner() {
+          const newToken = '4534';
+          console.log(token); // "12345"
+        }
+
+        console.log(newToken);
+
+        inner();
+      }
+
+      outer();
+
+      function level1() {
+        const a = 'Ben Level 1';
+
+        function level2() {
+          const b = 'Ben Level 2';
+
+          function level3() {
+            const c = 'Ben Level 3';
+
+            console.log(a); // "Ben Level 1"
+            console.log(b); // "Ben Level 2"
+            console.log(c); // "Ben Level 3"
+          }
+
+          level3();
+        }
+
+        level2();
+      }
+
+      level1();
+    </script>
+  </body>
+</html>

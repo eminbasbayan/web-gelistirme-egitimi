@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript'te every() ve some() Metotları</title>
+  </head>
+  <body>
+    <h1>JavaScript'te every() ve some() Metotları</h1>
+
+    <script>
+      //  const izinDurumlari = [true, false, true, true];
+
+      //  const herkesGetirdiMi = izinDurumlari.every((durum)=>{
+      //    return durum === true;
+      //  });
+
+      //  console.log(herkesGetirdiMi);
+
+      // const urunler = [
+      //   { ad: 'Laptop', stok: 12 },
+      //   { ad: 'Klavye', stok: 5 },
+      //   { ad: 'Mouse', stok: 0 },
+      // ];
+
+      // const hepsiStoktaMi = urunler.every((urun) => {
+      //   return urun.stok > 0;
+      // });
+
+      // console.log(hepsiStoktaMi);
+
+      const ehliyetDurumlari = [false, false, false, false];
+
+      const birisiEhliyetliMi = ehliyetDurumlari.some((durum) => {
+        return durum === true;
+      });
+
+      console.log(birisiEhliyetliMi);
+    </script>
+  </body>
+</html>

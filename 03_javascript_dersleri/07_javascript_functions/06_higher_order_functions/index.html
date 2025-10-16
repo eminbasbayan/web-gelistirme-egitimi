@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Higher Order Functions Nedir?</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Higher Order Functions Nedir?</h1>
+
+    <script>
+      // function ikiKezCalistir(gorev) {
+      //   gorev();
+      //   gorev();
+      // }
+
+      // function mesajGoster() {
+      //   console.log('Bu bir mesajdır.');
+      // }
+
+      // function selam() {
+      //   console.log('Merhaba');
+      // }
+
+      // ikiKezCalistir(mesajGoster);
+      // ikiKezCalistir(selam);
+
+      // function repeatFiveTimes(action) {
+      //   for (let i = 0; i < 5; i++) {
+      //     action();
+      //   }
+      // }
+
+      // function printRandomNumber() {
+      //   const number = Math.floor(Math.random() * 100) + 1;
+      //   console.log('Rastgele sayı:', number);
+      // }
+
+      // repeatFiveTimes(printRandomNumber);
+
+      //   function sesUretici(){
+      //     return function(){
+      //       console.log("Yeni ses: Bip bip!");
+      //     }
+      //   }
+
+      //  const ses = sesUretici();
+      //  ses();
+
+      function aralikKontrolFonksiyonu(min, max) {
+        return function (sayi) {
+          return sayi >= min && sayi <= max;
+        };
+      }
+
+      const gencMi = aralikKontrolFonksiyonu(13, 25);
+      const kontrol = aralikKontrolFonksiyonu(25, 78);
+
+      console.log(gencMi(20));
+      console.log(kontrol(24));
+    </script>
+  </body>
+</html>

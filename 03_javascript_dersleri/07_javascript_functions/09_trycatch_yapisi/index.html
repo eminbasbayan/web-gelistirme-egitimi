@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Try/Catch Yapısı</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Try/Catch Yapısı</h1>
+
+    <script>
+      // const kitapAdi = "Robin Hood";
+
+      // try {
+      //   // Hata yapabilecek kodlar
+      //   kitapAdi.toLowerCase();
+      // } catch (error) {
+      //   // Hata oluşursa burası çalışır
+      //   console.log('kitapAdi adında bir değişken tanımlamadın!');
+      //   console.log(error);
+      // }
+
+      function tekrarEt(text) {
+        try {
+          return (text.toUpperCase() + ' ').repeat(3);
+        } catch (error) {
+          return "Lütfen sadece metin giriniz!"
+        }
+      }
+
+      console.log(tekrarEt('Emin'));
+      console.log(tekrarEt(123));
+      console.log(tekrarEt(456));
+    </script>
+  </body>
+</html>

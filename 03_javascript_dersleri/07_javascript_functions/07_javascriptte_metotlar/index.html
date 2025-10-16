@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Metotlar: Fonksiyonların Objelerle Buluşması</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Metotlar: Fonksiyonların Objelerle Buluşması</h1>
+
+    <script>
+
+      const hesapMakinesi = {
+        topla: function(x, y){
+         return x + y;
+        },
+
+        carp: function(x, y){
+          return x * y
+        }
+      }    
+      
+      console.log(hesapMakinesi.topla(5, 4));
+      console.log(hesapMakinesi.topla(3, 8));
+
+      console.log(hesapMakinesi.carp(4, 3));
+
+      console.log("kitaplar".includes("la"));
+
+      // hesapMakinesi.carp()
+      console.log(hesapMakinesi["carp"](6, 4));
+
+      const ses = {
+        konus() {
+          return "Merhaba!"
+        }
+      }
+
+      console.log(ses.konus());
+      
+      
+    </script>
+  </body>
+</html>

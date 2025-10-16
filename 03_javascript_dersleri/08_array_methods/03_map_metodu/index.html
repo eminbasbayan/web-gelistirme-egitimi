@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te map() Metodu</title>
+  </head>
+  <body>
+    <h1>JavaScript’te map() Metodu</h1>
+
+    <script>
+      // const isimler = ['ayşe', 'mehmet', 'cemre', 'burak'];
+
+      // const duzenliIsimler = isimler.map(function (isim) {
+      //   return isim.charAt(0).toUpperCase() + isim.slice(1)
+      // });
+
+      // console.log(duzenliIsimler);
+      // console.log("Ana dizi:",isimler);
+
+      const urunler = [
+        { isim: 'Laptop', fiyat: 15000 },
+        { isim: 'Telefon', fiyat: 10000 },
+        { isim: 'Tablet', fiyat: 8000 },
+      ];
+
+      const urunIsimleri = urunler.map(function (urun) {
+        return urun.isim;
+      });
+
+      console.log(urunIsimleri);
+
+      const sepet = [
+        { ad: 'Kitap', fiyat: 120 },
+        { ad: 'Defter', fiyat: 30 },
+        { ad: 'Kalem', fiyat: 15 },
+      ];
+
+      const kdvliFiyatlar = sepet.map((urun) => {
+        return {
+          ad: urun.ad,
+          fiyat: urun.fiyat,
+          kdvliFiyat: urun.fiyat * 1.18,
+        };
+      });
+
+      console.log(kdvliFiyatlar);
+    </script>
+  </body>
+</html>

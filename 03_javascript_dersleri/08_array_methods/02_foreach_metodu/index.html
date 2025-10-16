@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te forEach() Metodu</title>
+  </head>
+  <body>
+    <h1>JavaScript’te forEach() Metodu</h1>
+
+    <script>
+      // const sehirler = ['Ankara', 'İzmir', 'Eskişehir', 'Adana'];
+
+      // sehirler.forEach(function (sehir) {
+      //   console.log(sehir);
+      // });
+
+      // const notlar = [45, 82, 67, 90, 74, 59];
+
+      // notlar.forEach(function (not) {
+      //   if (not >= 70) {
+      //     console.log(not);
+      //   }
+      // });
+
+      const kitaplar = [
+        { isim: 'Tutunamayanlar', sayfa: 724 },
+        { isim: 'Kürk Mantolu Madonna', sayfa: 160 },
+        { isim: 'Serenad', sayfa: 480 },
+      ];
+
+      kitaplar.forEach(function (kitap) {
+        if (kitap.sayfa >= 200) {
+          console.log(`${kitap.isim} - ${kitap.sayfa} sayfa`);
+        }
+      });
+    </script>
+  </body>
+</html>

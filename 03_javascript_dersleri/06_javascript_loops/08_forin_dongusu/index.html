@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Nesneler Üzerinde Döngü Kullanımı</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Nesneler Üzerinde Döngü Kullanımı</h1>
+
+    <script>
+      const ogrenci = {
+        ad: 'Zeynep',
+        not: 95,
+      };
+
+      console.log(ogrenci['ad']);
+      console.log(ogrenci.not);
+
+      for (let bilgi in ogrenci) {
+        console.log(ogrenci[bilgi]);
+      }
+
+      const kitaplar = {
+        'Harry Potter': 120,
+        'Yüzüklerin Efendisi': 200,
+        "Sefiller": 180,
+      };
+
+      for (let kitap in kitaplar) {
+        console.log(`${kitap} kitabı ${kitaplar[kitap]} sayfa`);
+      }
+
+      const arabalar = {
+        BMW: 3,
+        Mercedes: 5,
+        Toyota: 7,
+      };
+
+      console.log(Object.keys(arabalar));
+      console.log(Object.values(arabalar));
+      console.log(Object.entries(arabalar));
+      
+    </script>
+  </body>
+</html>

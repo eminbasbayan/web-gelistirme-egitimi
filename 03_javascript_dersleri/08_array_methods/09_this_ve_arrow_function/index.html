@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te this ve Arrow Function</title>
+  </head>
+  <body>
+    <h1>JavaScript’te this ve Arrow Function</h1>
+
+    <script>
+      // const ogrenci = {
+      //   ad: 'Mehmet',
+      //   selamla: function () {
+      //     console.log('Merhaba, ben ' + this.ad);
+      //   },
+      // };
+
+      // ogrenci.selamla()
+
+      const oyuncu = {
+        isim: 'Ayşe',
+        tanit: function () {
+          setTimeout(()=> {
+            console.log('Oyuncu: ' + this.isim);
+          }, 2000);
+        },
+      };
+
+      oyuncu.tanit();
+    </script>
+  </body>
+</html>

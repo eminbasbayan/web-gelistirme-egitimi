@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript'te Zamanlayıcı Fonksiyonlar</title>
+  </head>
+  <body>
+    <h1>JavaScript'te Zamanlayıcı Fonksiyonlar</h1>
+
+    <script>
+      // console.log('Hoş geldin!');
+
+      // setTimeout(()=> {
+      //   console.log('Bilgilendirme: Site çerez kullanmaktadır.');
+      // }, 3000)
+
+      // console.log('Lütfen gezinmeye devam edin.');
+
+      const id = setInterval(() => {
+        console.log('Belirli Aralıklarla İşlem Yapılıyor!');
+      }, 1000);
+
+      setTimeout(() => {
+        clearInterval(id);
+      }, 5000);
+    </script>
+  </body>
+</html>

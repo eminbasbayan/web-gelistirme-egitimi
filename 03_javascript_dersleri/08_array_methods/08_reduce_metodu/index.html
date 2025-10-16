@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te reduce() Metodu</title>
+  </head>
+  <body>
+    <h1>JavaScript’te reduce() Metodu</h1>
+
+    <script>
+      // const notlar = [60, 75, 80, 90];
+
+      // const toplam = notlar.reduce((biriken, simdiki) => {
+      //   return biriken + simdiki;
+      // }, 0);
+
+      // console.log(toplam);
+
+      const dereceler = [12, 5, -2, 8, 3];
+
+      const enDusuk = dereceler.reduce((biriken, simdiki) => {
+        if (simdiki < biriken) {
+          return simdiki;
+        } else {
+          return biriken;
+        }
+      });
+
+      console.log(enDusuk);
+      
+    </script>
+  </body>
+</html>

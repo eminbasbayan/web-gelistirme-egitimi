@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te return Anahtar Kelimesi</title>
+  </head>
+  <body>
+    <h1>JavaScript’te return Anahtar Kelimesi</h1>
+
+    <script>
+      function carp(a, b) {
+        return a * b;
+        // console.log(a * b);
+      }
+
+      const sonuc = carp(5, 6);
+      console.log(sonuc);
+
+      function yazVeDon() {
+        return 'Bitti';
+        console.log('Bu satır asla çalışmaz');
+        console.log('Bu satır asla çalışmaz');
+        console.log('Bu satır asla çalışmaz');
+        console.log('Bu satır asla çalışmaz');
+        console.log('Bu satır asla çalışmaz');
+      }
+
+      const sonuc2 = yazVeDon();
+      console.log(sonuc2);
+
+      function topla(a, b) {
+        if (typeof a !== 'number' || typeof b !== 'number') {
+          return 'Geçersiz giriş';
+        }
+
+        return a + b;
+      }
+
+      console.log(topla(4, 5));
+      console.log(topla(4, '5'));
+
+      const metin = 'Merhaba';
+
+      const yeniMetin = metin.toUpperCase();
+
+      console.log(yeniMetin);
+      
+    </script>
+  </body>
+</html>

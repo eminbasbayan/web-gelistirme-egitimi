@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript'te this Anahtar Kelimesi</title>
+  </head>
+  <body>
+    <h1>JavaScript'te this Anahtar Kelimesi</h1>
+
+    <script>
+      const student = {
+        name: "Mert",
+        grade: 11,
+        introduce(){
+          console.log(`${this.name} isimli Öğrenci ${this.grade}. sınıfta.`);
+        }
+      }
+
+      const student2 = {
+        name: "Ayşe",
+        grade: 10,
+        introduce: student.introduce
+      }
+
+      student.introduce();
+      student2.introduce();
+
+      console.log(student.name);
+      console.log(student.grade);
+
+      const tanit = student.introduce
+      tanit();
+
+      console.log(window);
+      
+      
+    </script>
+  </body>
+</html>

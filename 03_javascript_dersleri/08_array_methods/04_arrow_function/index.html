@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Arrow Function (Ok Fonksiyonları)</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Arrow Function (Ok Fonksiyonları)</h1>
+
+    <script>
+      function selamVer(isim) {
+        return `Merhaba, ${isim}`;
+      }
+
+      const selamVer2 = (isim) => {
+        return `Merhaba, ${isim}`;
+      };
+
+      console.log(selamVer('Emin'));
+      console.log(selamVer2('Emin'));
+
+      const kareAl = (sayi) => {
+        return sayi * sayi;
+      };
+
+      console.log(kareAl(2));
+
+      const ciftMi = (sayi) => sayi % 2 === 0;
+
+      console.log(ciftMi(3));
+
+      const tersCevir = (kelime) => {
+        let harfler = kelime.split('');
+        return harfler.reverse().join('');
+      };
+
+      const notlar = [40, 55, 70, 85, 90];
+
+
+      const gectiMi = notlar.map(not => not >= 50);
+
+      console.log(gectiMi);
+      
+    </script>
+  </body>
+</html>

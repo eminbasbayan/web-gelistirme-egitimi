@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te filter() Metodu</title>
+  </head>
+  <body>
+    <h1>JavaScript’te filter() Metodu</h1>
+
+    <script>
+      // const sicakliklar = [22, 35, 28, 40, 19, 33, 25];
+
+      // const sicakGunler = sicakliklar.filter((sicaklik)=>{
+      //   return sicaklik > 30;
+      // })
+
+      // console.log(sicakGunler);
+
+      const kitaplar = [
+        { ad: 'Yüzüklerin Efendisi', sayfa: 1200 },
+        { ad: 'Küçük Prens', sayfa: 95 },
+        { ad: 'Sefiller', sayfa: 1463 },
+        { ad: 'Hayvan Çiftliği', sayfa: 112 },
+      ];
+
+      const kitapBul = kitaplar.find((kitap)=> {
+          return kitap.sayfa > 95
+      });
+
+      console.log(kitapBul);
+      
+
+      const kalinKitaplar = kitaplar.filter((kitap) => {
+        return kitap.sayfa > 300;
+      });
+
+      const uzunKitapIsimleri = kitaplar
+        .filter((kitap) => {
+          return kitap.sayfa > 1000;
+        })
+        .map((kitap) => kitap.ad);
+
+   
+        console.log(uzunKitapIsimleri);
+        
+
+    </script>
+  </body>
+</html>
