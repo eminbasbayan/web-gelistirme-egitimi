@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      JavaScript'te İç İçe Döngüler ve Çok Boyutlu Dizilerle Çalışmak
+    </title>
+  </head>
+  <body>
+    <h1>JavaScript'te İç İçe Döngüler ve Çok Boyutlu Dizilerle Çalışmak</h1>
+
+    <script>
+      const salonDuzeni = [
+        ['Ahmet', 'Burcu', 'Cem'], // sıra 1
+        ['Deniz', 'Emre', 'Feyza'], // sıra 2
+        ['Gizem', 'Hakan', 'İlayda', "Emin"], // sıra 3
+      ];
+
+      for (let sira = 0; sira < salonDuzeni.length; sira++) {
+        console.log('Sıra', sira + 1);
+
+        for (let ogrenci = 0; ogrenci < salonDuzeni[sira].length; ogrenci++) {
+          console.log('Öğrenci:', salonDuzeni[sira][ogrenci]);
+        }
+      }
+
+      console.log(salonDuzeni);
+
+      console.log(salonDuzeni[0]);
+      console.log(salonDuzeni[0][0]);
+      console.log(salonDuzeni[0][1]);
+      console.log(salonDuzeni[0][2]);
+
+      console.log(salonDuzeni[1]);
+      console.log(salonDuzeni[1][0]);
+      console.log(salonDuzeni[1][1]);
+      console.log(salonDuzeni[1][2]);
+
+      console.log(salonDuzeni[2]);
+      console.log(salonDuzeni[2][0]);
+      console.log(salonDuzeni[2][0]);
+      console.log(salonDuzeni[2][2]);
+    </script>
+  </body>
+</html>
