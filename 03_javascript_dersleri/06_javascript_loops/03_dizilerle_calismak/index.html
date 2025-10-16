@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te For Döngüsü ile Diziler Üzerinde Dolaşmak</title>
+  </head>
+  <body>
+    <h1>JavaScript’te For Döngüsü ile Diziler Üzerinde Dolaşmak</h1>
+
+    <script>
+      const sehirler = [
+        'İstanbul',
+        'Ankara',
+        'İzmir',
+        'Bursa',
+        'Antalya',
+        'Düzce',
+        'Adana',
+      ];
+
+      console.log(sehirler.length);
+      // console.log(sehirler[0]);
+      // console.log(sehirler[1]);
+      // console.log(sehirler[2]);
+      // console.log(sehirler[3]);
+      // console.log(sehirler[4]);
+      // console.log(sehirler[5]);
+
+      for (let i = 0; i < sehirler.length; i++) {
+        console.log(sehirler[i]);
+      }
+
+      for (let i = sehirler.length - 1; i >= 0; i--) {
+        console.log(sehirler[i]);
+      }
+    </script>
+  </body>
+</html>
