@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Rest Operatörü</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Rest Operatörü</h1>
+
+    <script>
+      // const sinavSonuclari = [85, 90, 78, 92, 88];
+
+      // const [birinciDeger, ikinciDeger, ...geriKalan] = sinavSonuclari;
+
+      // console.log(birinciDeger);
+      // console.log(ikinciDeger);
+      // console.log(geriKalan);
+
+      // const kullanici = {
+      //   ad: 'Selin',
+      //   yas: 24,
+      //   sehir: 'İstanbul',
+      //   universite: 'Uludağ Üniversitesi',
+      // };
+
+      // const { ad, ...kalanBilgiler } = kullanici;
+
+      // console.log(ad);
+      // console.log(kalanBilgiler);
+
+      function topla(...sayilar) {
+        return sayilar.reduce((toplam, element) => toplam + element, 0);
+      }
+
+      console.log(topla(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+    </script>
+  </body>
+</html>

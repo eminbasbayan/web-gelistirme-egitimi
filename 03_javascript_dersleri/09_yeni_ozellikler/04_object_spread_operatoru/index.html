@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obje İşlemlerinde Spread Kullanımı</title>
+  </head>
+  <body>
+    <h1>Obje İşlemlerinde Spread Kullanımı</h1>
+
+    <script>
+      // const ogrenci = {
+      //   ad: 'Zeynep',
+      //   sinif: 11,
+      // };
+
+      // const yeniOgrenci = { ...ogrenci, sayfaSayisi: 208 };
+
+      // console.log(ogrenci);
+      // console.log(yeniOgrenci);
+
+      // const urunBilgisi = {
+      //   isim: 'Laptop',
+      //   marka: 'Dell',
+      // };
+
+      // const fiyatBilgisi = {
+      //   fiyat: 18500,
+      //   paraBirimi: 'TL',
+      // };
+
+      // const tamUrun = { ...urunBilgisi, ...fiyatBilgisi };
+
+      // console.log(tamUrun);
+
+      // const birinci = { marka: 'HP', renk: 'siyah' };
+      // const ikinci = { marka: 'Lenovo', ekran: 15.6 };
+
+      // const sonuc = { ...ikinci, ...birinci };
+
+      // console.log(sonuc);
+
+      // const abc = { marka: 'a', marka: 'b' };
+
+      // console.log(abc);
+
+      // const formVerisi = {
+      //   kullaniciAdi: 'mehmet123',
+      //   email: 'mehmet@example.com',
+      // };
+
+      // const sistemVerisi = {
+      //   id: 1007,
+      //   aktifMi: true,
+      // };
+
+      // const yeniKullanici = {...formVerisi, ...sistemVerisi}
+
+      // console.log(yeniKullanici);
+
+      const sayilar = [5, 10, 15];
+
+      const obj = { ...sayilar };
+
+      console.log(obj);
+    </script>
+  </body>
+</html>

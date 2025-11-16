@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript’te Destructuring Assignment</title>
+  </head>
+  <body>
+    <h1>JavaScript’te Destructuring Assignment</h1>
+
+    <script>
+      //  const sayilar = [4, 5, 6];
+      // //  console.log(sayilar[0]);
+      // //  console.log(sayilar[1]);
+      // //  console.log(sayilar[2]);
+      //  const [birinci, , ucuncu] = sayilar;
+
+      //  console.log(birinci);
+      //  // console.log(ikinci);
+      //  console.log(ucuncu);
+      //  console.log(sayilar);
+
+      // const ogrenci = {
+      //   ad: 'Zeynep',
+      //   yas: 22,
+      //   bolum: 'Bilgisayar Mühendisliği',
+      // };
+
+      // const ad = ogrenci.ad;
+
+      // const {
+      //   ad: isim,
+      //   bolum,
+      //   yas: ogrenciYasi,
+      //   universite = 'Bursa Uludağ Üniversitesi',
+      // } = ogrenci;
+
+      // console.log(ad);
+      // console.log(isim);
+      // console.log(bolum);
+      // console.log(ogrenciYasi);
+      // console.log(universite);
+      // console.log(ogrenci);
+
+      const kullanici = {
+        isim: 'Emir',
+        adres: {
+          sehir: 'İzmir',
+          postaKodu: 35000,
+        },
+      };
+
+      const {
+        isim,
+        adres: { sehir, postaKodu },
+      } = kullanici;
+
+      console.log(isim);
+      console.log(sehir);
+      console.log(postaKodu);
+    </script>
+  </body>
+</html>
