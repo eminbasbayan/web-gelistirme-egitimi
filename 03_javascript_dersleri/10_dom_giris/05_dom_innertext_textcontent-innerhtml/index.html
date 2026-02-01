@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      JavaScript DOM: innerText, textContent ve innerHTML Kavramları
+    </title>
+  </head>
+  <body>
+    <h1>JavaScript DOM: innerText, textContent ve innerHTML Kavramları</h1>
+
+    <div id="kutu">
+      <p>Paragraf 1</p>
+      <p style="display: none">Gizli Paragraf</p>
+      <p>Paragraf 2</p>
+    </div>
+
+    
+
+    <script>
+        const kutu = document.querySelector("#kutu");
+
+        console.log(kutu.innerText);
+        console.log(kutu.textContent);
+        console.log(kutu.innerHTML);
+
+        //kutu.innerText = "Hello!"
+        //console.log(kutu.innerText);
+        //kutu.textContent = "Yeni İçerik!"
+        //console.log(kutu.textContent);
+        //kutu.innerHTML = "<h2>Yeni Başlık</h2><p>Yeni Açıklama</p>"
+        //kutu.innerText = "<h2>Yeni Başlık</h2><p>Yeni Açıklama</p>"
+        kutu.textContent = "<h2>Yeni Başlık</h2><p>Yeni Açıklama</p>"
+
+
+        
+    </script>
+  </body>
+</html>
