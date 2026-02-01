@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      JavaScript DOM: HTML Özellikleri (Attribute) Üzerinde Çalışmak
+    </title>
+  </head>
+  <body>
+    <h1>JavaScript DOM: HTML Özellikleri (Attribute) Üzerinde Çalışmak</h1>
+
+    <div id="kutu">İçerik</div>
+    <input type="checkbox" id="onay" />
+    <a id="link" href="/sayfa"></a>
+    <img alt="Image" id="image" />
+
+    <div
+      id="urun"
+      data-id="42"
+      data-fiyat="150"
+      data-kategori="elektronik"
+      data-stok-durumu="var"
+    >
+      Ürün Bilgisi
+    </div>
+
+    <script>
+      const kutu = document.getElementById('kutu');
+      const checkbox = document.querySelector('#onay');
+      const link = document.querySelector('#link');
+      const imageTag = document.querySelector('#image');
+      const urun = document.querySelector("#urun");
+
+      console.log(kutu.id);
+      checkbox.disabled = true;
+      checkbox.checked = true;
+
+      console.log(checkbox.getAttribute('type'));
+
+      console.log(link.href);
+      console.log(link.getAttribute('href'));
+
+      imageTag.src =
+        'https://yazilimogreniyorum.org/assets/files/2025-08-25/1756110201-882008-javascriptte-attribute-uzerinde-calismak.png';
+      imageTag.setAttribute(
+        'src',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnNHnYB3QaBVZSIG9tqurZrPRdSXoBAEMNHIQ7KmSv6SJ7-np0ZvfKAudsXOnH2immM4uce53Xw_ZqJ-MUDjgi3f8ceABzMIgn8Jzj_Q&s=10',
+      );
+
+      imageTag.removeAttribute('alt');
+      imageTag.removeAttribute('src');
+
+      console.log(checkbox.hasAttribute('id'));
+      console.log(checkbox.hasAttribute('src'));
+
+      console.log(urun.getAttribute("data-id"));   
+
+      console.log(urun.dataset.fiyat);
+      
+    </script>
+  </body>
+</html>
