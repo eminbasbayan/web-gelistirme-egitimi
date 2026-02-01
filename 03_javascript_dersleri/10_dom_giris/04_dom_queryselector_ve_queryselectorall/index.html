@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM: querySelector ve querySelectorAll Kullanımı</title>
+  </head>
+  <body>
+    <h1>JavaScript DOM: querySelector ve querySelectorAll Kullanımı</h1>
+
+    <form id="kayit-formu">
+      <input type="text" name="ad" placeholder="Adınız" />
+      <input type="email" name="email" placeholder="E-posta" />
+      <input type="password" name="sifre" placeholder="Şifre" />
+      <button type="submit">Kayıt Ol</button>
+    </form>
+
+    <script>
+        const inputlar = document.querySelectorAll("#kayit-formu input");
+
+        console.log(inputlar);
+
+        inputlar.forEach((input)=> {
+            console.log(input);
+        })
+
+        console.log(typeof [...inputlar]);
+        console.log(Array.from(inputlar));
+        
+        const adInput = document.querySelector("input[type='text']");
+        console.log(adInput.placeholder);
+        console.log(document.querySelectorAll("h2"));
+        
+        
+    </script>
+  </body>
+</html>
