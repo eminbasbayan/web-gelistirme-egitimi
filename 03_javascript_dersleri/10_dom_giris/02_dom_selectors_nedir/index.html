@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM: Selectors (Seçiciler) Nedir?</title>
+</head>
+<body>
+    <h1 id="ana-baslik">JavaScript DOM: Selectors (Seçiciler) Nedir?</h1>
+
+    <script>
+      console.log(document.getElementById("ana-baslik"));
+      const baslikEtiketi = document.getElementById("ana-baslik");
+      console.dir(baslikEtiketi);
+      
+      baslikEtiketi.innerText = "Yeni Değer!"
+      baslikEtiketi.innerText = ""
+      baslikEtiketi.innerHTML = ""
+      baslikEtiketi.style = ""
+      
+    </script>
+</body>
+</html>
