@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      JavaScript DOM: getElementsByTagName ve getElementsByClassName Kullanımı
+    </title>
+  </head>
+  <body>
+    <h1>
+      JavaScript DOM: getElementsByTagName ve getElementsByClassName Kullanımı
+    </h1>
+
+    <ul>
+      <li>Elma</li>
+      <li>Armut</li>
+      <li>Muz</li>
+    </ul>
+
+    <p class="mesaj">Birinci mesaj</p>
+    <p class="mesaj">İkinci mesaj</p>
+    <p class="uyari">Bu bir uyarı</p>
+    <p class="mesaj">Üçüncü mesaj</p>
+
+    <script>
+      const liElements = document.getElementsByTagName('li');
+      const pElements = document.getElementsByTagName("p");
+      const mesajClass = document.getElementsByClassName("mesaj")
+
+      console.log(liElements);
+      console.log(liElements.length);
+      console.log(liElements[1]);
+
+      console.log(pElements);
+      console.log([...pElements]);
+      console.log(mesajClass);
+      console.log(Array.from(mesajClass));
+      console.log(document.getElementsByClassName("kutu"));
+      console.log(document.getElementsByTagName("a"));
+      
+    </script>
+  </body>
+</html>
