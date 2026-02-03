@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM: Yeni HTML Öğeleri Oluşturma ve Yerleştirme</title>
+  </head>
+  <body>
+    <!-- <h1>JavaScript DOM: Yeni HTML Öğeleri Oluşturma ve Yerleştirme</h1> -->
+
+    <h1 id="baslik">Ana Başlık</h1>
+    <p>Paragraf</p>
+
+    <div id="kutu">
+      <p>Mevcut içerik</p>
+    </div>
+
+    <ul id="liste"></ul>
+
+    <script>
+      const liste = document.querySelector('#liste');
+      liste.insertAdjacentHTML("beforeend", "<li>Yeni Öğe</>")
+
+      const kutu = document.querySelector('#kutu');
+
+      // beforebegin - öncesine
+      const onceki = document.createElement('h2');
+      onceki.innerText = 'Kutudan Önce';
+      kutu.insertAdjacentElement('beforebegin', onceki);
+
+      // afterbegin - içine, başa
+      const ilk = document.createElement('p');
+      ilk.innerText = 'İlk paragraf';
+      kutu.insertAdjacentElement('afterbegin', ilk);
+
+      // beforeend - içine, sona
+      const son = document.createElement('p');
+      son.innerText = 'Son paragraf';
+      kutu.insertAdjacentElement('beforeend', son);
+
+      // afterend - sonrasına
+      const sonraki = document.createElement('h2');
+      sonraki.innerText = 'Kutudan Sonra';
+      kutu.insertAdjacentElement('afterend', sonraki);
+
+      const baslik = document.querySelector('#baslik');
+
+      const altBaslik = document.createElement('h2');
+      altBaslik.innerText = 'Alt Başlık;';
+      //baslik.after(altBaslik)
+      baslik.before(altBaslik);
+
+      const body = document.querySelector('body');
+      const yeniP = document.createElement('p');
+
+      yeniP.innerText = 'Hello World!';
+      yeniP.id = 'pTag';
+      yeniP.classList.add('p-element');
+      yeniP.style.backgroundColor = 'red';
+      //document.body.appendChild(yeniP)
+      document.body.prepend(yeniP);
+      document.body.prepend('Hi!');
+      console.log(yeniP);
+    </script>
+  </body>
+</html>
