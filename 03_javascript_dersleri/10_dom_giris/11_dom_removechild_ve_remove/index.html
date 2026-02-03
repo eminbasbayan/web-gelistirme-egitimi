@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM: removeChild() ve remove() Metotları</title>
+  </head>
+  <body>
+    <h1>JavaScript DOM: removeChild() ve remove() Metotları</h1>
+
+    <ul id="liste">
+      <li>Öğe 1</li>
+      <li>Öğe 2</li>
+      <li>Öğe 3</li>
+    </ul>
+
+    <script>
+      const ilkLi = document.querySelector("#liste li");
+      const ikinciLi = document.querySelectorAll("#liste li")[1];
+
+      ikinciLi.remove();
+      
+
+      // const parent = ilkLi.parentElement;
+
+      // parent.removeChild(ilkLi);
+    </script>
+  </body>
+</html>
