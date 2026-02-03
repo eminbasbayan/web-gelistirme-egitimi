@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM: Parent, Children ve Siblings</title>
+  </head>
+  <body>
+    <h1>JavaScript DOM: Parent, Children ve Siblings</h1>
+
+    <div class="kart">
+      <h3 class="baslik">Ürün Adı</h3>
+      <p class="fiyat">100 TL</p>
+    </div>
+
+    <ul id="menu">
+      <li>Ana Sayfa</li>
+      <li>Hakkımızda</li>
+      <li>İletişim</li>
+    </ul>
+
+    <div class="kart" data-id="42">
+      <div class="kart-body">
+        <h3>Başlık</h3>
+        <p>Açıklama</p>
+        <button class="detay-btn">Detay</button>
+      </div>
+    </div>
+
+    <script>
+      const baslik = document.querySelector('.baslik');
+      const menu = document.querySelector('#menu');
+
+      console.log(baslik.parentElement);
+      console.log(baslik.parentElement.parentElement);
+
+      const menuOgeleri = menu.children;
+      console.log(menuOgeleri);
+      console.log(menuOgeleri[1]);
+      console.log(menuOgeleri.length);
+      console.log(menu.childElementCount);
+
+      console.log(menu.firstElementChild);
+      console.log(menu.lastElementChild);
+
+      console.log(menu.children[1].nextElementSibling);
+
+      console.log(menu.children);
+      console.log(menu.childNodes);
+
+      const btn = document.querySelector(".detay-btn");
+
+      const kart = btn.closest(".kart");
+      console.log(kart);
+      console.log(btn.closest("h3"));
+      
+      
+    </script>
+  </body>
+</html>
