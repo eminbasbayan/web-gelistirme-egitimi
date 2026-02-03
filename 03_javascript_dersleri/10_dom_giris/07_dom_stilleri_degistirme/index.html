@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM: Web Sayfası Üzerindeki Stilleri Değiştirme</title>
+    <style>
+        #kutu {
+            border: 6px solid red;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript DOM: Web Sayfası Üzerindeki Stilleri Değiştirme</h1>
+
+    <p id="kutu" style="margin-top: 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam doloremque iure ex rerum illo voluptatibus inventore quia blanditiis quis. Ducimus et, sunt minus ea nesciunt eum est cumque provident perspiciatis.</p>
+
+    <script>
+         const kutu = document.querySelector("#kutu");
+         const stiller = window.getComputedStyle(kutu)
+
+         kutu.style.color = "red";
+         kutu.style.padding = "20px";
+         kutu.style.fontSize = "24px";
+         kutu.style.backgroundColor = "blue";
+
+         console.log(kutu.style.color);
+         console.log(kutu.style.marginTop);
+         console.log(kutu.style.border);
+
+         console.log(stiller.border);
+
+         console.log(kutu.style.marginLeft);
+         console.log(stiller.marginLeft);
+         
+         kutu.style.cssText = "color: white; background-color: black;";
+
+         Object.assign(kutu.style, {
+            color: "black",
+            backgroundColor: "white"
+         });
+
+         kutu.style.backgroundColor = "";
+         kutu.style.removeProperty("color")
+         kutu.style.border = "initial";
+         
+    </script>
+</body>
+</html>
