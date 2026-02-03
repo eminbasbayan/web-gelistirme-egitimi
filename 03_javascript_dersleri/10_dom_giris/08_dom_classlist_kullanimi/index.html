@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM: classList Kullanımı</title>
+    <style>
+      .vurgulu {
+        background-color: yellow;
+        font-size: 24px;
+      }
+
+      .yeni-class {
+        background-color: aqua;
+      }
+
+      .dark {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body id="dark">
+    <h1>JavaScript DOM: classList Kullanımı</h1>
+
+    <p id="kutu">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quasi atque
+      quia blanditiis, ipsam optio quae aspernatur quisquam sapiente consequatur
+      eveniet praesentium, explicabo amet molestiae quis, et dicta quas est.
+    </p>
+
+    <script>
+      const kutu = document.getElementById('kutu');
+      const dark = document.querySelector('#dark');
+
+      kutu.classList.add('vurgulu', 'yeni-class');
+      kutu.classList.add('vurgulu');
+
+      kutu.classList.remove('vurgulu', 'yeni-class');
+      kutu.classList.remove('kart');
+      console.log(kutu.classList);
+
+      dark.classList.toggle('dark');
+      kutu.classList.add('vurgulu');
+      kutu.classList.add('yeni-class');
+
+      console.log(kutu.classList.contains('vurgulu'));
+
+      kutu.classList.replace('vurgulu', 'vurgu-yok');
+
+      console.log(kutu.classList);
+      console.log(kutu.className);
+      
+    </script>
+  </body>
+</html>
