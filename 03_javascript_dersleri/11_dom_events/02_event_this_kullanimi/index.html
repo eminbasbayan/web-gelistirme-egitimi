@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      JavaScript DOM Events: Event Handler'larda "this" Anahtar Kelimesi
+    </title>
+  </head>
+  <body>
+    <h1>JavaScript DOM Events: Event Handler'larda "this" Anahtar Kelimesi</h1>
+
+    <button class="renk-btn">Kırmızı</button>
+    <button class="renk-btn">Mavi</button>
+    <button class="renk-btn">Yeşil</button>
+    <button class="renk-btn">Sarı</button>
+    <button class="renk-btn">Mor</button>
+
+    <div class="renk-kart">Kırmızı</div>
+    <div class="renk-kart">Mavi</div>
+    <div class="renk-kart">Yeşil</div>
+    <div class="renk-kart">Sarı</div>
+    <div class="renk-kart">Mor</div>
+
+    <p class="container" style="background-color: red; color: white">
+      <button>Click</button>
+    </p>
+
+    <script>
+      const container = document.querySelector('.container');
+
+      container.addEventListener('click', function (event) {
+        console.log('event.target: ', event.target);
+        console.log('event.currentTarget: ', event.currentTarget);
+        console.log('this: ', this);
+      });
+
+      const butonlar = document.querySelectorAll('button');
+      const kartlar = document.querySelectorAll('div');
+
+      /*         butonlar.forEach(function(buton) {
+            buton.addEventListener("click", function (){
+                buton.style.backgroundColor = "orange";
+                buton.style.color = "white"
+            })
+        }) */
+
+      /*       butonlar.forEach(function (buton) {
+        buton.addEventListener('mouseleave', function () {
+          this.style.backgroundColor = 'orange';
+          this.style.color = 'white';
+          console.log(this);
+        });
+      }); */
+
+      function vurgula() {
+        this.style.backgroundColor = '#f0f0f0';
+        this.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+        this.style.transform = 'scale(1.05)';
+      }
+
+      function vurguyuKaldir() {
+        this.style.backgroundColor = '';
+        this.style.boxShadow = '';
+        this.style.transform = '';
+      }
+
+      butonlar.forEach(function (buton) {
+        buton.addEventListener('mouseenter', vurgula);
+        buton.addEventListener('mouseleave', vurguyuKaldir);
+      });
+
+      kartlar.forEach(function (kart) {
+        kart.addEventListener('mouseenter', vurgula);
+        kart.addEventListener('mouseleave', vurguyuKaldir);
+      });
+    </script>
+  </body>
+</html>
