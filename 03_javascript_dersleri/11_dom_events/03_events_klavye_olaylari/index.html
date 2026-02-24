@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM Events: Klavye Olayları ve Event Object</title>
+  </head>
+  <body>
+    <h1>JavaScript DOM Events: Klavye Olayları ve Event Object</h1>
+
+    <div class="kutu">Kutu</div>
+    <input type="text" id="aramaKutusu" />
+
+    <script>
+      const kutu = document.querySelector('.kutu');
+      const input = document.querySelector('#aramaKutusu');
+
+      input.addEventListener('keydown', function (event) {
+     /*    console.log('Tuşa BASILDI!', event.key);
+        console.log('code: ', event.code); */
+        console.log(event.ctrlKey);
+        console.log(event.shiftKey);
+        console.log(event.altKey);
+      });
+
+      input.addEventListener('keyup', function (event) {
+        console.log('Tuş BIRAKILDI!', event.key);
+      });
+
+      kutu.addEventListener('click', function (event) {
+        console.log(event.type);
+        console.log(event.target);
+        console.log(event.clientX);
+        console.log(event.clientY);
+      });
+    </script>
+  </body>
+</html>
