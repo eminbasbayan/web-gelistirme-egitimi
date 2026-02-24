@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM Events: Form Events ve preventDefault</title>
+  </head>
+  <body>
+    <h1>JavaScript DOM Events: Form Events ve preventDefault</h1>
+
+    <form action="/kayit" method="POST" id="benimForm">
+      <input type="text" name="kullaniciAdi" id="kullaniciAdi" />
+      <input type="email" name="kullaniciEmail" id="kullaniciEmail" />
+      <button type="submit">Kayıt Ol</button>
+    </form>
+
+    <script>
+      const form = document.querySelector('#benimForm');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const ad = document.querySelector('#kullaniciAdi').value;
+        const email = document.querySelector('#kullaniciEmail').value;
+
+        const formData = new FormData(this);
+
+        console.log(formData);
+
+       const veriler = Object.fromEntries(formData);
+       console.log("veriler: ", veriler);
+       
+
+        console.log(ad);
+        console.log(email);
+      });
+    </script>
+  </body>
+</html>
