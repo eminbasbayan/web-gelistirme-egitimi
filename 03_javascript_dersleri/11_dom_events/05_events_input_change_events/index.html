@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM Events: Input ve Change Events</title>
+  </head>
+  <body>
+    <h1>JavaScript DOM Events: Input ve Change Events</h1>
+
+    <textarea id="mesaj" maxlength="280"></textarea>
+    <p id="sayac">0 / 280</p>
+
+    <label>
+      <input type="checkbox" id="kosullar" /> Şartları kabul ediyorum
+    </label>
+
+    <select id="sehir">
+      <option value="">Şehir Seçin</option>
+      <option value="istanbul">İstanbul</option>
+      <option value="ankara">Ankara</option>
+      <option value="izmir">İzmir</option>
+    </select>
+
+    <script>
+      const mesajAlani = document.querySelector('#mesaj');
+      const sayac = document.querySelector('#sayac');
+
+      mesajAlani.addEventListener('change', function () {
+        const mevcutUzunluk = this.value.length;
+        const maksUzunluk = this.getAttribute('maxlength');
+
+        sayac.textContent = `${mevcutUzunluk} / ${maksUzunluk}`;
+
+        // Limite yaklaşınca uyar
+        if (mevcutUzunluk >= maksUzunluk - 20) {
+          sayac.style.color = 'orange';
+        }
+        if (mevcutUzunluk >= maksUzunluk - 10) {
+          sayac.style.color = 'red';
+        }
+        if (mevcutUzunluk < maksUzunluk - 20) {
+          sayac.style.color = 'inherit';
+        }
+      });
+
+      const checkbox = document.querySelector('#kosullar');
+
+      checkbox.addEventListener('change', function () {
+        console.log(this.checked);
+      });
+
+      const sehirSelect = document.querySelector('#sehir');
+
+      sehirSelect.addEventListener('change', function () {
+        console.log(this.value);
+      });
+    </script>
+  </body>
+</html>
