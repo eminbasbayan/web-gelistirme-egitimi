@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM Events: Event Delegation</title>
+  </head>
+  <body>
+    <h1>JavaScript DOM Events: Event Delegation</h1>
+    <div class="container">
+      <ul id="gorev-listesi" class="gorev-listesi">
+        <li>Alışveriş yap <button class="sil gorev-listesi">❌</button></li>
+        <li>Spor yap <button class="sil">❌</button></li>
+        <li>Kitap oku <button class="sil">❌</button></li>
+      </ul>
+      <button id="ekle">Yeni Görev Ekle</button>
+    </div>
+
+    <script>
+      const container = document.querySelector('.container');
+
+      container.addEventListener('click', function () {
+        /* console.log(event.target.closest('.gorev-listesi')); */
+        console.log(event.target.matches('.sil'));
+      });
+
+      /*   const silButonlari = document.querySelectorAll('.sil');
+      console.log(silButonlari);
+
+      silButonlari.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          this.parentElement.remove();
+        });
+      }); */
+
+      // Yeni görev ekleme
+      /*   const ekleBtn = document.querySelector('#ekle');
+      const liste = document.querySelector('#gorev-listesi');
+
+      ekleBtn.addEventListener('click', function () {
+        const yeniGorev = document.createElement('li');
+        yeniGorev.innerHTML = "Yeni görev <button class='sil'>❌</button>";
+        liste.appendChild(yeniGorev);
+
+        // Yeni butona da event ekle
+        const yeniSilBtn = yeniGorev.querySelector('.sil');
+        yeniSilBtn.addEventListener('click', function () {
+          this.parentElement.remove();
+        });
+      }); */
+
+      const ekleBtn = document.querySelector('#ekle');
+      const liste = document.querySelector('#gorev-listesi');
+
+      liste.addEventListener('click', function (event) {
+      /*   console.log(event.target.classList); */
+        if (event.target.classList.contains('sil')) {
+          event.target.parentElement.remove();
+        }
+      });
+
+      ekleBtn.addEventListener('click', function () {
+        const yeniGorev = document.createElement('li');
+        yeniGorev.innerHTML = "Yeni görev <button class='sil'>❌</button>";
+        liste.appendChild(yeniGorev);
+      });
+    </script>
+  </body>
+</html>
