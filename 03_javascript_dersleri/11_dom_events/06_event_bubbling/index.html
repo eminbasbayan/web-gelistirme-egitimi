@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM Events: Event Bubbling</title>
+    <style>
+      .dropdown-icerik {
+        display: none;
+      }
+
+      .goster {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript DOM Events: Event Bubbling</h1>
+
+    <div id="buyuk-kutu" style="padding: 50px; background: lightblue">
+      Büyük Kutu
+      <div id="orta-kutu" style="padding: 30px; background: lightgreen">
+        Orta Kutu
+        <button id="buton">Tıkla Beni</button>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropdown-btn">Menü ▼</button>
+      <div class="dropdown-icerik">
+        <a href="#">Profil</a>
+        <a href="#">Ayarlar</a>
+        <a href="#">Çıkış</a>
+      </div>
+    </div>
+
+    <script>
+      const buyukKutu = document.querySelector('#buyuk-kutu');
+      const ortaKutu = document.querySelector('#orta-kutu');
+      const buton = document.querySelector('#buton');
+
+      buton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        console.log('Click button');
+      });
+
+      ortaKutu.addEventListener('click', (event) => {
+        event.stopPropagation();
+        console.log('Click ortaKutu');
+      });
+
+      buyukKutu.addEventListener('click', () => {
+        console.log('Click buyukKutu');
+      });
+
+      /* ****************************** */
+
+      const dropdownBtn = document.querySelector('.dropdown-btn');
+      const dropdownIcerik = document.querySelector('.dropdown-icerik');
+
+      dropdownBtn.addEventListener('click', (event) => {
+        event.stopPropagation();
+        dropdownIcerik.classList.toggle('goster');
+      });
+
+      dropdownIcerik.addEventListener('click', (event) => {
+        event.stopPropagation();
+      });
+
+      document.addEventListener('click', () => {
+        dropdownIcerik.classList.remove('goster');
+      });
+    </script>
+  </body>
+</html>
